@@ -70,7 +70,7 @@ const SendTip = () => {
       if (!ethereum) {
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         const metamaskUrl = isMobile
-          ? 'https://metamask.app.link/dapp/your-dapp-url'
+          ? 'https://metamask.app.link/dapp/sv-eth-tips-app.vercel.app/'
           : 'https://metamask.io/download.html';
   
         toast({
