@@ -25,8 +25,8 @@ The contract owner can withdraw the funds from the contract at any time.
 ## Getting Started
 
 1. Clone this repository.
-2. Install dependencies using `npm install`.
-3. Create a `.env` file in the root directory with the following variables:
+2. Install dependencies using `npm install` in both `blockchain folder` and `client folder`.
+3. Create a `.env` file in the `blockchain` directory with the following variables:
    - `SEPOLIA_URL` (ex: https://eth-sepolia.g.alchemy.com/v2/<api-key> from Alchemy)
    - `SEPOLIA_API_KEY`: `<api-key>`
    - `PRIVATE_KEY`: (private key of the wallet deploying the contract)
@@ -42,12 +42,10 @@ To deploy the contract using Hardhat:
 
 1. Update the `hardhat.config.js` file with your network settings.
 2. Run `npx hardhat compile` to compile the contracts.
-3. Run `npx hardhat deploy --network <network-name>` to deploy the contracts to the specified network.
+3. Run `npx hardhat run scripts/deploy.ts --network <network-name>` to deploy the contracts to the specified network.
 
 ## Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
-
-```
 
 Make sure to include a `.gitignore` file in your project directory with entries for `.env` and any other sensitive files that should not be shared publicly.
