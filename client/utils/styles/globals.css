@@ -85,3 +85,11 @@
       @apply w-full flex flex-col justify-center items-center gap-4 gap-y-6 relative p-2 sm:p-4 rounded-md bg-secondary border border-border;
     }
   }
+
+  input {
+    font-size: 16px !important;
+  }
+  
+  textarea {
+    font-size: 16px !important;
+  }
