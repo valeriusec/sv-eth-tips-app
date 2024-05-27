@@ -61,6 +61,8 @@ const SendTip = () => {
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     sendTip(values.name, values.message);
+    form.setValue("name", "");
+    form.setValue("message", "");
   };
 
   const connectWallet = async () => {
