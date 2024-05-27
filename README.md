@@ -44,6 +44,8 @@ To deploy the contract using Hardhat:
 2. Run `npx hardhat compile` to compile the contracts.
 3. Run `npx hardhat run scripts/deploy.ts --network <network-name>` to deploy the contracts to the specified network.
 
+Make sure to add a copy of the contract abi: blockchain/artifacts/contracts/Tip.json to the client folder every time the contract is deployed.
+
 ## Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
