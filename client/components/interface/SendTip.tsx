@@ -9,7 +9,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
-import abi from '../../../blockchain/artifacts/contracts/Tip.sol/Tip.json';
+import abi from '@/utils/lib/Tip.json';
 import { Button } from "../ui/button";
 import {
   Form,
