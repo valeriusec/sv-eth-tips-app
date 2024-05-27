@@ -66,20 +66,32 @@ const SendTip = () => {
   const connectWallet = async () => {
     try {
       const { ethereum } = window as any;
-
+  
       if (!ethereum) {
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        const metamaskUrl = isMobile
+          ? 'https://metamask.app.link/dapp/your-dapp-url'
+          : 'https://metamask.io/download.html';
+  
         toast({
           title: "MetaMask not found",
-          description: "Please install MetaMask to use this feature.",
+          description: (
+            <div>
+              Please install MetaMask to use this feature.
+              <br />
+              <a href={metamaskUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+                Download MetaMask
+              </a>
+            </div>
+          ),
           duration: 5000,
           variant: "destructive",
         });
         return;
       }
 
-      // const network = await ethereum.request({ method: "net_version" });
       const NETWORK_ID = "11155111";
-
+  
       if (ethereum.networkVersion !== NETWORK_ID) {
         toast({
           title: "Wrong Network",
@@ -89,11 +101,11 @@ const SendTip = () => {
         });
         return;
       }
-
+  
       const accounts = await ethereum.request({
         method: "eth_requestAccounts",
       });
-
+  
       setCurrentAccount(accounts[0]);
       getOwner();
       toast({
@@ -113,6 +125,7 @@ const SendTip = () => {
       });
     }
   };
+  
 
   const sendTip = async (name: string, message: string) => {
     try {
