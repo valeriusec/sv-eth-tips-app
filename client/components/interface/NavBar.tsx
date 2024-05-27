@@ -6,7 +6,7 @@ import Link from "next/link";
 const Navbar = async () => {
   return (
     <nav
-      className={`flex w-full items-center justify-between py-2 px-2 sm:px-4 backdrop-blur-2xl fixed top-0 z-50`}
+      className={`flex w-full items-center justify-between py-2 px-2 sm:px-4 bg-background fixed top-0 z-50`}
     >
       <Logo />
       <div className="flex gap-2">

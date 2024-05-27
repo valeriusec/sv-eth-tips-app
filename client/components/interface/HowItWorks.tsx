@@ -90,7 +90,7 @@ const HowItWorks = () => {
         <Link className="font-bold text-primary underline" href={`https://sepolia.etherscan.io/address/${contractAddressConstant}`}>
             Block Explorer
         </Link>
-        <p>
+        <p className="break-all text-center">
             {contractAddressConstant}
         </p>
         {codeTheme === null ? 
