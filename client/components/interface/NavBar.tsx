@@ -10,7 +10,7 @@ const Navbar = async () => {
     >
       <Logo />
       <div className="flex gap-2">
-        <Link target="_blank" href="" className="h-10 flex justify-center items-center rounded-md w-10 bg-primary border border-border">
+        <Link target="_blank" href="https://github.com/valeriusec/sv-eth-tips-app" className="h-10 flex justify-center items-center rounded-md w-10 bg-primary border border-border">
             <Image src="/images/github.svg" alt="Github Logo" width={24} height={24} />
         </Link>
         <ThemeToggle />
